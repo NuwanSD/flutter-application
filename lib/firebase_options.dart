@@ -62,4 +62,5 @@ class DefaultFirebaseOptions {
     storageBucket: 'eco-memories.appspot.com',
     measurementId: 'G-YWBR992K05',
   );
+
 }
