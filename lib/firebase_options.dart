@@ -17,27 +17,15 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for android - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return android;
       case TargetPlatform.iOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for ios - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       case TargetPlatform.windows:
         return windows;
       case TargetPlatform.linux:
@@ -63,4 +51,47 @@ class DefaultFirebaseOptions {
     measurementId: 'G-YWBR992K05',
   );
 
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyA1UAQ0d5AjrJZvoljpXbT7QrUI9wr_eRI',
+    appId: '1:224927663250:web:200480b22e803c63a4524b',
+    messagingSenderId: '224927663250',
+    projectId: 'eco-memories',
+    authDomain: 'eco-memories.firebaseapp.com',
+    databaseURL: 'https://eco-memories-default-rtdb.firebaseio.com',
+    storageBucket: 'eco-memories.appspot.com',
+    measurementId: 'G-YWBR992K05',
+  );
+
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyAtDb-ReOmKxYguhhuv3F1hszyym4KB2g0',
+    appId: '1:224927663250:ios:c8a31caa53de09a6a4524b',
+    messagingSenderId: '224927663250',
+    projectId: 'eco-memories',
+    databaseURL: 'https://eco-memories-default-rtdb.firebaseio.com',
+    storageBucket: 'eco-memories.appspot.com',
+    iosClientId:
+        '224927663250-2i5kvbtlemn3ovi740v25qlarj14f0fv.apps.googleusercontent.com',
+    iosBundleId: 'com.example.ecoMemories',
+  );
+
+  static const FirebaseOptions ios = FirebaseOptions(
+    apiKey: 'AIzaSyAtDb-ReOmKxYguhhuv3F1hszyym4KB2g0',
+    appId: '1:224927663250:ios:c8a31caa53de09a6a4524b',
+    messagingSenderId: '224927663250',
+    projectId: 'eco-memories',
+    databaseURL: 'https://eco-memories-default-rtdb.firebaseio.com',
+    storageBucket: 'eco-memories.appspot.com',
+    iosClientId:
+        '224927663250-2i5kvbtlemn3ovi740v25qlarj14f0fv.apps.googleusercontent.com',
+    iosBundleId: 'com.example.ecoMemories',
+  );
+
+  static const FirebaseOptions android = FirebaseOptions(
+    apiKey: 'AIzaSyAq5OAXO0LL1uh_e7u1rza-s7jVajPWeK8',
+    appId: '1:224927663250:android:6eb63a83917b4c78a4524b',
+    messagingSenderId: '224927663250',
+    projectId: 'eco-memories',
+    databaseURL: 'https://eco-memories-default-rtdb.firebaseio.com',
+    storageBucket: 'eco-memories.appspot.com',
+  );
 }

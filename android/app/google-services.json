@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "224927663250",
+    "firebase_url": "https://eco-memories-default-rtdb.firebaseio.com",
+    "project_id": "eco-memories",
+    "storage_bucket": "eco-memories.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:224927663250:android:6eb63a83917b4c78a4524b",
+        "android_client_info": {
+          "package_name": "com.example.eco_memories"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "224927663250-get7d42540vuvmeef6uijulup0jqfcbl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAq5OAXO0LL1uh_e7u1rza-s7jVajPWeK8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "224927663250-get7d42540vuvmeef6uijulup0jqfcbl.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "224927663250-2i5kvbtlemn3ovi740v25qlarj14f0fv.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.ecoMemories"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
