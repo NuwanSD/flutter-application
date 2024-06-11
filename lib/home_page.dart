@@ -13,18 +13,6 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final user = FirebaseAuth.instance.currentUser!;
 
-  // document IDs
-  // List<String> docIDs = [];
-
-  // Future getDocId() async {
-  //   await FirebaseFirestore.instance.collection('data').get().then(
-  //         (snapshot) => snapshot.docs.forEach((document) {
-  //           print(document.reference);
-  //           docIDs.add(document.reference.id);
-  //         }),
-  //       );
-  // }
-
   final databaseReference = FirebaseDatabase.instance.ref();
 
   String bottle = 'Loading...';
@@ -58,62 +46,68 @@ class _HomePageState extends State<HomePage> {
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text('Signed in as : ' + user.email!),
+          Text('Signed in as : ${user.email!}'),
           SizedBox(
-            height: 10,
+            height: 20,
           ),
           Padding(
             padding: const EdgeInsets.all(20),
             child: Container(
               decoration: BoxDecoration(
-                color: Colors.deepOrange[200],
+                color: Colors.deepPurple[200],
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Padding(
-                padding: const EdgeInsets.all(20),
+                padding: const EdgeInsets.all(50),
                 child: Column(
                   children: [
                     Text(
-                      "Bottle: $bottle",
+                      "Number of Bottle: $bottle",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20,
                     ),
                     Text(
-                      "IsFull: $isFull",
+                      "Number of Keytag: $keytag",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20,
                     ),
                     Text(
-                      "Keytag: $keytag",
+                      "Is Bucket Full?: $isFull",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ],
                 ),
               ),
             ),
           ),
-
           SizedBox(
-            height: 10,
+            height: 20,
           ),
           MaterialButton(
             onPressed: () {
               FirebaseAuth.instance.signOut();
             },
             color: Colors.deepPurple[200],
-            child: Text("Sign out"),
+            child: Text(
+              "Sign out",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ),
           SizedBox(
             height: 20,
           ),
-          // Expanded(
-          //     child: FutureBuilder(
-          //         future: getDocId(),
-          //         builder: (context, snapshot) {
-          //           return ListView.builder(
-          //             itemCount: docIDs.length,
-          //             itemBuilder: (context, index) {
-          //               return ListTile(
-          //                 title: Text(docIDs[index]),
-          //               );
-          //             },
-          //           );
-          //         })),
         ],
       )),
     );
