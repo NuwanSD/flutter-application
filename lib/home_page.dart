@@ -233,7 +233,8 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ],
                   ),
-                  child: Center(
+                  child: Align(
+                    alignment: Alignment.centerLeft,  // Aligns the tile to the left
                     child: InfoTile(
                       label: "Is Bucket Full?",
                       value: isFull ? 'Yes' : 'No',
