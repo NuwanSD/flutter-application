@@ -111,7 +111,8 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -165,7 +166,7 @@ class _HomePageState extends State<HomePage> {
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Image.asset(
-                            'assets/bottle_image.png', // Add your bottle image asset here
+                            'assets/logo.png', // Add your bottle image asset here
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -206,7 +207,7 @@ class _HomePageState extends State<HomePage> {
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Image.asset(
-                            'assets/keytag_image.png', 
+                            'assets/logo.png',
                             fit: BoxFit.cover,
                           ),
                         ),
