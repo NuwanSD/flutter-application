@@ -206,7 +206,7 @@ class _HomePageState extends State<HomePage> {
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Image.asset(
-                            'assets/keytag_image.png', // Add your keytag image asset here
+                            'assets/keytag_image.png', 
                             fit: BoxFit.cover,
                           ),
                         ),
