@@ -1,3 +1,4 @@
+import 'package:eco_memories/fogot_pw_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -48,7 +49,7 @@ class _LoginPageState extends State<LoginPage> {
           child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+              children: <Widget>[
                 Icon(
                   Icons.android,
                   size: 100,
@@ -111,6 +112,34 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                 ),
+
+                SizedBox(height: 10),
+
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      GestureDetector(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context){
+                            return FogotPasswordPage();
+                           },
+                         ),
+                        );
+                      },
+  
+                        child: Text('Forgot Password?',
+                        style: TextStyle(
+                            color: Colors.blue,
+                            fontWeight: FontWeight.bold,
+                        ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                
                 SizedBox(height: 10),
 
                 // Error Message
