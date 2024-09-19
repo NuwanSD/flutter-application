@@ -50,9 +50,9 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Icon(
-                  Icons.android,
-                  size: 100,
+                Image.asset(
+                  'assets/logo.png',
+                  height: 100, // Adjust the height as needed
                 ),
                 Text(
                   "Eco-Memories",
@@ -121,19 +121,17 @@ class _LoginPageState extends State<LoginPage> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       GestureDetector(
-                        onTap: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context){
+                        onTap: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context) {
                             return FogotPasswordPage();
-                           },
-                         ),
-                        );
-                      },
-  
-                        child: Text('Forgot Password?',
-                        style: TextStyle(
+                          }));
+                        },
+                        child: Text(
+                          'Forgot Password?',
+                          style: TextStyle(
                             color: Colors.blue,
                             fontWeight: FontWeight.bold,
-                        ),
+                          ),
                         ),
                       ),
                     ],
