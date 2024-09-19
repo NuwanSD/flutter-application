@@ -56,18 +56,19 @@ class _HomePageState extends State<HomePage> {
           padding: const EdgeInsets.all(8.0),
           child: Image.asset(
             'assets/logo.png', // Updated path to the logo
-            width: 250,
+            width: 150,
             height: 150,
             fit: BoxFit.contain, // Ensures the image fits within the size
           ),
         ),
         actions: [
-          IconButton(
-            icon: Icon(Icons.search, color: Colors.black),
-            onPressed: () {
-              // Implement search functionality
-            },
-          ),
+          //Disable this function
+          // IconButton(
+          //   icon: Icon(Icons.search, color: Colors.black),
+          //   onPressed: () {
+          //     // Implement search functionality
+          //   },
+          // ),
           IconButton(
             icon: Icon(Icons.notifications, color: Colors.black),
             onPressed: () {
@@ -234,7 +235,8 @@ class _HomePageState extends State<HomePage> {
                     ],
                   ),
                   child: Align(
-                    alignment: Alignment.centerLeft,  // Aligns the tile to the left
+                    alignment:
+                        Alignment.centerLeft, // Aligns the tile to the left
                     child: InfoTile(
                       label: "Is Bucket Full?",
                       value: isFull ? 'Yes' : 'No',
