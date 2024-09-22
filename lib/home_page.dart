@@ -15,8 +15,8 @@ class _HomePageState extends State<HomePage> {
   final databaseReference = FirebaseDatabase.instance.ref();
 
   String bottle = 'Loading...';
-  bool isFull = false;
   String keytag = 'Loading...';
+  int isFull = 0;
 
   @override
   void initState() {
@@ -26,14 +26,14 @@ class _HomePageState extends State<HomePage> {
         bottle = event.snapshot.value.toString();
       });
     });
-    databaseReference.child('IsFull').onValue.listen((event) {
-      setState(() {
-        isFull = event.snapshot.value as bool;
-      });
-    });
     databaseReference.child('Keytag').onValue.listen((event) {
       setState(() {
         keytag = event.snapshot.value.toString();
+      });
+    });
+    databaseReference.child('IsFull').onValue.listen((event) {
+      setState(() {
+        isFull = event.snapshot.value as int;
       });
     });
   }
@@ -62,13 +62,6 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         actions: [
-          //Disable this function
-          // IconButton(
-          //   icon: Icon(Icons.search, color: Colors.black),
-          //   onPressed: () {
-          //     // Implement search functionality
-          //   },
-          // ),
           IconButton(
             icon: Icon(Icons.notifications, color: Colors.black),
             onPressed: () {
@@ -239,7 +232,7 @@ class _HomePageState extends State<HomePage> {
                         Alignment.centerLeft, // Aligns the tile to the left
                     child: InfoTile(
                       label: "Is Bucket Full?",
-                      value: isFull ? 'Yes' : 'No',
+                      value: isFull == 0 ? 'No' : 'Yes',
                       textColor: Colors.white,
                     ),
                   ),
