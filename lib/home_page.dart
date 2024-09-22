@@ -160,7 +160,7 @@ class _HomePageState extends State<HomePage> {
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Image.asset(
-                            'assets/logo.png', // Add your bottle image asset here
+                            'assets/bottles.png', // Add your bottle image asset here
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -201,7 +201,7 @@ class _HomePageState extends State<HomePage> {
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Image.asset(
-                            'assets/logo.png',
+                            'assets/eco keytag.png',
                             fit: BoxFit.cover,
                           ),
                         ),
