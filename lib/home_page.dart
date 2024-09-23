@@ -52,15 +52,17 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 1,
-        leading: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Image.asset(
-            'assets/logo.png', // Updated path to the logo
-            width: 150,
-            height: 150,
-            fit: BoxFit.contain, // Ensures the image fits within the size
-          ),
-        ),
+        toolbarHeight: 50,
+        leading: SizedBox(
+    width: 500,  // Set the desired width
+    height: 500, // Set the desired height
+    child: Image.asset(
+      'assets/logo.png',
+       // Ensures the image fits within the size
+    ),
+  ),
+
+
         actions: [
           IconButton(
             icon: Icon(Icons.notifications, color: Colors.black),
@@ -161,7 +163,8 @@ class _HomePageState extends State<HomePage> {
                           padding: const EdgeInsets.all(8.0),
                           child: Image.asset(
                             'assets/bottles.png', // Add your bottle image asset here
-                            fit: BoxFit.cover,
+                            width:100,
+                            height:200,
                           ),
                         ),
                       ),
@@ -202,7 +205,8 @@ class _HomePageState extends State<HomePage> {
                           padding: const EdgeInsets.all(8.0),
                           child: Image.asset(
                             'assets/eco keytag.png',
-                            fit: BoxFit.cover,
+                            width:100,
+                            height:200,
                           ),
                         ),
                       ),
